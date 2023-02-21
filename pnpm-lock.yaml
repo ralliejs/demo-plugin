@@ -1,8 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@rallie/block': ^0.11.0
-  '@rallie/load-html': ^0.11.0
+  '@rallie/block': ^0.13.0
+  '@rallie/load-html': ^0.13.0
+  '@rallie/react': ^0.13.0
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react': ^3.1.0
@@ -11,8 +12,9 @@ specifiers:
   vite: ^4.1.0
 
 dependencies:
-  '@rallie/block': 0.11.0
-  '@rallie/load-html': 0.11.0
+  '@rallie/block': 0.13.0
+  '@rallie/load-html': 0.13.0
+  '@rallie/react': 0.13.0_jabkromqlmwonemo6tjfckfer4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -487,20 +489,30 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@rallie/block/0.11.0:
-    resolution: {integrity: sha512-YmoDop8P+SpPoZrxRG853mYf8S8anHgqfOFZwQUE0VppdnGNkbV6PDhxTMnGWwDfNx1dO9DqaIJH9Y7PCi0e0w==}
+  /@rallie/block/0.13.0:
+    resolution: {integrity: sha512-xGxxtqElnhu/X9dQtU+6MSAAL6Ie4Qz6GlR9/7QzENHt7cXJvp+vB4djnXk2p9/4odrT8tXAYEYJF4g6VxGC/g==}
     dependencies:
-      '@rallie/core': 0.11.0
+      '@rallie/core': 0.13.0
     dev: false
 
-  /@rallie/core/0.11.0:
-    resolution: {integrity: sha512-O8ZDTvo9da5ODHDQjvjVRd7HpkC5O5CfNkIuO54sjLrddclxo6OuxHX7VsSbia94ePjy1s6LcInZcabsc4+/9g==}
+  /@rallie/core/0.13.0:
+    resolution: {integrity: sha512-VByAGXEHg2IddbpgAecvjcmEtiL9buMB7mSws2wKpQhgB5hqp0pnbIkcSAZIMYMXeMbyNaHUQmefLhehy+KeaQ==}
     dependencies:
       '@vue/reactivity': 3.2.47
     dev: false
 
-  /@rallie/load-html/0.11.0:
-    resolution: {integrity: sha512-jte9Ht6d7zlr5vnXHbi90hRZ4TfOwEKKinr7v2DIRSbJZwT/B3h4K3jUAnNDG/rEI7ffnBIU+MicY5WKUAAksw==}
+  /@rallie/load-html/0.13.0:
+    resolution: {integrity: sha512-hjaA3OyrgnnhTCMyS3T9rXG/pJGzMGJKUi7TIveeII1EWejsbxlaXHC98Ucs5ZKuxcJ4Z1/Rmu004NLmwxRYTQ==}
+    dev: false
+
+  /@rallie/react/0.13.0_jabkromqlmwonemo6tjfckfer4:
+    resolution: {integrity: sha512-Uvv/DgKvrPLR8RDb4rN8vYLt5gCnI1/luVKvbc4njbAaMH4lmI5jyTeKCTPIVxKlKy7R860xuEAk4IGxIwN/aQ==}
+    peerDependencies:
+      '@rallie/block': ^0.6.0
+      react: '>=16.8.0'
+    dependencies:
+      '@rallie/block': 0.13.0
+      react: 18.2.0
     dev: false
 
   /@types/prop-types/15.7.5:

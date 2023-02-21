@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rallie/block": "^0.11.0",
-    "@rallie/load-html": "^0.11.0",
+    "@rallie/block": "^0.13.0",
+    "@rallie/load-html": "^0.13.0",
+    "@rallie/react": "^0.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

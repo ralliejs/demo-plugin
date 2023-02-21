@@ -1,31 +1,26 @@
 import { registerBlock } from "@rallie/block";
 import { demo } from "./blocks/plugin-demo";
-import { loadHtml } from "@rallie/load-html";
+import { core } from "./blocks/core";
 
 registerBlock(demo)
-  .relyOn([
-    {
-      name: "core",
-      data: {
-        container: document.getElementById("root"),
-      },
-    },
-  ])
-  .onBootstrap(() => {
-    return import("./app").then((app) => {
-      app.bootstrap();
+  .relyOn(["core"])
+  .onActivate(() => {
+    core.setState("注册首页", (state) => {
+      state.home = import("./components/App");
+    });
+    core.setState("注册应用", (state) => {
+      state.applications.push({
+        name: "样例",
+        path: "demo",
+        loader: import("./components/App"),
+      });
     });
   });
 
 demo.run((env) => {
   if (env.isEntry) {
-    env.use(
-      loadHtml({
-        entries: {
-          core: "http://localhost:8080",
-        },
-      })
-    );
-    demo.activate(demo.name);
+    import("./dev").then((app) => {
+      app.runInNonEntryMode(env);
+    });
   }
 });
