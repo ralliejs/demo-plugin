@@ -1,5 +1,5 @@
 import { loadHtml } from "@rallie/load-html";
-import { demo } from "./blocks/plugin-demo";
+import { demo } from "./blocks/demo";
 
 export const runInNonEntryMode = (env) => {
   env.use(

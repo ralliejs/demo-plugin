@@ -3,20 +3,20 @@ lockfileVersion: 5.4
 specifiers:
   '@rallie/block': ^0.13.0
   '@rallie/load-html': ^0.13.0
-  '@rallie/react': ^0.13.0
+  '@rallie/react': ^0.13.1
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react': ^3.1.0
   react: ^18.2.0
-  react-dom: ^18.2.0
+  react-router-dom: ^6.8.1
   vite: ^4.1.0
 
 dependencies:
   '@rallie/block': 0.13.0
   '@rallie/load-html': 0.13.0
-  '@rallie/react': 0.13.0_jabkromqlmwonemo6tjfckfer4
+  '@rallie/react': 0.13.1_jabkromqlmwonemo6tjfckfer4
   react: 18.2.0
-  react-dom: 18.2.0_react@18.2.0
+  react-router-dom: 6.8.1_react@18.2.0
 
 devDependencies:
   '@types/react': 18.0.28
@@ -505,14 +505,19 @@ packages:
     resolution: {integrity: sha512-hjaA3OyrgnnhTCMyS3T9rXG/pJGzMGJKUi7TIveeII1EWejsbxlaXHC98Ucs5ZKuxcJ4Z1/Rmu004NLmwxRYTQ==}
     dev: false
 
-  /@rallie/react/0.13.0_jabkromqlmwonemo6tjfckfer4:
-    resolution: {integrity: sha512-Uvv/DgKvrPLR8RDb4rN8vYLt5gCnI1/luVKvbc4njbAaMH4lmI5jyTeKCTPIVxKlKy7R860xuEAk4IGxIwN/aQ==}
+  /@rallie/react/0.13.1_jabkromqlmwonemo6tjfckfer4:
+    resolution: {integrity: sha512-06WNJOfpn4or1u/2O0w+itLNfbeisI3n1eq5Z7pp0GnuGlkcdb3OzXugyCcfcPAEXmAWuAjGdrfhw9KZrdCegQ==}
     peerDependencies:
       '@rallie/block': ^0.6.0
       react: '>=16.8.0'
     dependencies:
       '@rallie/block': 0.13.0
       react: 18.2.0
+    dev: false
+
+  /@remix-run/router/1.3.2:
+    resolution: {integrity: sha512-t54ONhl/h75X94SWsHGQ4G/ZrCEguKSRQr7DrjTciJXW0YU1QhlwYeycvK5JgkzlxmvrK7wq1NB/PLtHxoiDcA==}
+    engines: {node: '>=14'}
     dev: false
 
   /@types/prop-types/15.7.5:
@@ -774,20 +779,32 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /react-dom/18.2.0_react@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
-    dev: false
-
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-dom/6.8.1_react@18.2.0:
+    resolution: {integrity: sha512-67EXNfkQgf34P7+PSb6VlBuaacGhkKn3kpE51+P6zYSG2kiRoumXEL6e27zTa9+PGF2MNXbgIUHTVlleLbIcHQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.3.2
+      react: 18.2.0
+      react-router: 6.8.1_react@18.2.0
+    dev: false
+
+  /react-router/6.8.1_react@18.2.0:
+    resolution: {integrity: sha512-Jgi8BzAJQ8MkPt8ipXnR73rnD7EmZ0HFFb7jdQU24TynGW1Ooqin2KVDN9voSC+7xhqbbCd2cjGUepb6RObnyg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.3.2
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -812,12 +829,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /scheduler/0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
