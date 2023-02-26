@@ -5,6 +5,8 @@ import { useBlockState } from "@rallie/react";
 import "./App.css";
 import { demo } from "../blocks/demo";
 
+const { Button } = demo.connect("core").methods.getAntdComponents();
+
 function App() {
   const count = useBlockState(demo, (state) => state.count);
   const incrementCount = () => {
@@ -32,6 +34,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Button type="primary">Primary Button</Button>
     </div>
   );
 }

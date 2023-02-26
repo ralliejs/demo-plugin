@@ -13,10 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       react: path.resolve(__dirname, "src/lib/react.js"),
-      // "react-router-dom": path.resolve(
-      //   __dirname,
-      //   "src/lib/react-router-dom.js"
-      // ),
+      "react-dom": path.resolve(__dirname, "src/lib/react-dom.js"),
     },
   },
 });
