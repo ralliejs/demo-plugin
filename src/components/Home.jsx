@@ -4,7 +4,8 @@ const Antd = demo.connect("core").methods.getAntdComponents();
 
 const { Button, App } = Antd;
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props);
   const { modal } = App.useApp();
   return (
     <div>
@@ -17,7 +18,7 @@ export default function Home() {
           });
         }}
       >
-        Primary Button
+        {props.text}
       </Button>
     </div>
   );
