@@ -1,6 +1,6 @@
 import { createBlock } from "@rallie/block";
 
-export const demo = createBlock("demo")
+export const demo = createBlock("demo-plugin")
   .initState({
     count: 0,
   })
@@ -13,7 +13,7 @@ export const demo = createBlock("demo")
     core.setState("注册应用", (state) => {
       state.applications.push({
         name: "测试应用",
-        locale: "demo:menu.root",
+        locale: "demo-plugin:menu.root",
         path: "demo",
         children: [
           {
@@ -22,7 +22,7 @@ export const demo = createBlock("demo")
           },
           {
             name: "菜单1",
-            locale: "demo:menu.firstChild",
+            locale: "demo-plugin:menu.firstChild",
             path: "level-1",
             loader: () => import("../components/App"),
           },
