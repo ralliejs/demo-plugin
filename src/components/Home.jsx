@@ -5,7 +5,6 @@ const Antd = demo.connect("core").methods.getAntdComponents();
 const { Button, App } = Antd;
 
 export default function Home(props) {
-  console.log(props);
   const { modal } = App.useApp();
   return (
     <div>
@@ -14,7 +13,7 @@ export default function Home(props) {
         onClick={() => {
           modal.info({
             title: "Hello",
-            content: "Hello World!",
+            content: props.text,
           });
         }}
       >
