@@ -1,0 +1,1 @@
+import{R as e}from"./react-0b8f741d.js";import{d as n}from"./demo-151454c7.js";const c=n.connect("core").methods.getAntdComponents(),{Button:m,App:r}=c;function d(t){const{modal:o}=r.useApp();return e.createElement("div",null,e.createElement(m,{type:"primary",onClick:()=>{o.info({title:"Hello",content:t.text})}},t.text))}export{d as default};
