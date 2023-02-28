@@ -5,7 +5,7 @@ export const runInNonEntryMode = (env) => {
   env.use(
     loadHtml({
       entries: {
-        core: "http://localhost:8080/", // "https://ralliejs.github.io/open-platform/",
+        core: "https://ralliejs.github.io/open-platform/",
       },
     })
   );
