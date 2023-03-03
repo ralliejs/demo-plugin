@@ -4,8 +4,9 @@ import viteLogo from "../assets/vite.svg";
 import { useBlockState } from "@rallie/react";
 import "./App.css";
 import { demo } from "../blocks/demo";
+import { Button } from "antd";
 
-const { Button } = demo.connect("core").methods.getAntdComponents();
+// const { Button } = demo.connect("core").methods.getAntdComponents();
 
 function App() {
   const count = useBlockState(demo, (state) => state.count);

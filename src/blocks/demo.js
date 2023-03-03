@@ -29,7 +29,7 @@ export const demo = createBlock("demo-plugin")
         ],
       });
     });
-    await core.methods.addI18nResource(demo.name, {
+    await core.methods.addI18nResources({
       "zh-CN": () => import("../i18n/zh-CN"),
       "en-US": () => import("../i18n/en-US"),
     });
