@@ -7,8 +7,12 @@ export const demo = createBlock("demo-plugin")
   .relyOn(["core"])
   .onActivate(async () => {
     const core = demo.connect("core");
+    await core.methods.addI18nResources({
+      "zh-CN": () => import("../i18n/zh-CN"),
+      "en-US": () => import("../i18n/en-US"),
+    });
     core.setState("注册首页", (state) => {
-      state.slot.home = () => import("../components/Home");
+      state.slots.home = () => import("../components/Home");
     });
     core.setState("注册应用", (state) => {
       state.applications.push({
@@ -29,15 +33,4 @@ export const demo = createBlock("demo-plugin")
         ],
       });
     });
-    await core.methods.addI18nResources({
-      "zh-CN": () => import("../i18n/zh-CN"),
-      "en-US": () => import("../i18n/en-US"),
-    });
-    if (!core.state.root) {
-      const container = document.createElement("div");
-      document.body.appendChild(container);
-      core.setState("挂载root", (state) => {
-        state.root = container;
-      });
-    }
   });
