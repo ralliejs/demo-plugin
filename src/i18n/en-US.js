@@ -1,4 +1,4 @@
 export default {
-  "menu.root": "Plugin Menu",
+  "menu.root": "Sample Plugin",
   "menu.firstChild": "First Child",
 };

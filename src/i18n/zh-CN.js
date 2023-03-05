@@ -1,4 +1,4 @@
 export default {
-  "menu.root": "插件菜单",
+  "menu.root": "样例插件",
   "menu.firstChild": "一级菜单",
 };

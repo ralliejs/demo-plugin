@@ -1,6 +1,14 @@
 import { createBlock } from "@rallie/block";
 
-export const demo = createBlock("demo-plugin")
+// const delay = (seconds) => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, seconds * 1000);
+//   });
+// };
+
+export const demo = createBlock("ralliejs/demo-plugin")
   .initState({
     count: 0,
   })
@@ -11,13 +19,22 @@ export const demo = createBlock("demo-plugin")
       "zh-CN": () => import("../i18n/zh-CN"),
       "en-US": () => import("../i18n/en-US"),
     });
-    core.setState("注册首页", (state) => {
-      state.slots.home = () => import("../components/Home");
+    // await delay(5);
+    core.methods.registerPluginInfo({
+      title: "样例插件",
+      description: "这是一个样例插件",
     });
-    core.setState("注册应用", (state) => {
+    core.setState("通过直接改状态的方式拓展宿主应用(不推荐)", (state) => {
+      state.slots.home = () => import("../components/Home");
       state.applications.push({
-        name: "测试应用",
-        locale: "demo-plugin:menu.root",
+        name: "样例应用",
+        icon: async () => {
+          const { BlockOutlined } = await import("@ant-design/icons");
+          return {
+            default: BlockOutlined,
+          };
+        },
+        locale: `${demo.name}:menu.root`,
         path: "demo",
         children: [
           {
@@ -25,8 +42,8 @@ export const demo = createBlock("demo-plugin")
             loader: () => import("../components/App"),
           },
           {
-            name: "菜单1",
-            locale: "demo-plugin:menu.firstChild",
+            name: "一级菜单",
+            locale: `${demo.name}:menu.firstChild`,
             path: "level-1",
             loader: () => import("../components/App"),
           },

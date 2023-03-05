@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ant-design/icons': ^5.0.1
   '@rallie/block': ^0.15.0
   '@rallie/load-html': ^0.14.0
   '@rallie/react': ^0.15.0
@@ -15,6 +16,7 @@ specifiers:
   vite-plugin-externals: ^0.6.2
 
 dependencies:
+  '@ant-design/icons': 5.0.1_biqbaboplfbrettd7655fr4n2y
   '@rallie/block': 0.15.0
   '@rallie/load-html': 0.14.0
   '@rallie/react': 0.15.0_flkuujhrhprqze73vokkhzkygy

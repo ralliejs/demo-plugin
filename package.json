@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@rallie/block": "^0.15.0",
     "@rallie/load-html": "^0.14.0",
     "@rallie/react": "^0.15.0",
