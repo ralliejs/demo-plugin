@@ -6,8 +6,8 @@ demo.run(async (env) => {
     env.use(
       loadHtml({
         entries: {
-          // core: "https://ralliejs.github.io/open-platform/#",
-          core: "http://localhost:8080/#core",
+          core: "https://ralliejs.github.io/open-platform/#core",
+          // core: "http://localhost:8080/#core",
         },
       })
     );
