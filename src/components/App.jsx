@@ -5,11 +5,11 @@ import { useBlockState } from "@rallie/react";
 import "./App.css";
 import { demo } from "../blocks/demo";
 import { Button } from "antd";
-
-// const { Button } = demo.connect("core").methods.getAntdComponents();
+import { useTranslation } from "../i18n";
 
 function App() {
   const count = useBlockState(demo, (state) => state.count);
+  const { t } = useTranslation();
   const incrementCount = () => {
     demo.setState("incrementCount", (state) => {
       state.count++;
@@ -27,15 +27,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={incrementCount}>count is {count}</button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <Button type="primary" onClick={incrementCount}>
+          count is {count}
+        </Button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <Button type="primary">Primary Button</Button>
+      <p className="read-the-docs">{t("app.hint")}</p>
     </div>
   );
 }

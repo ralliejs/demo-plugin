@@ -1,8 +1,6 @@
 import { Button, App } from "antd";
-// import { demo } from "../blocks/demo";
-// const Antd = demo.connect("core").methods.getAntdComponents();
-// const { Button, App } = Antd;
 
+// core的上下文直接从props注入
 export default function Home(props) {
   const { modal } = App.useApp();
   return (
