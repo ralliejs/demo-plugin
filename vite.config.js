@@ -15,6 +15,7 @@ export default defineConfig({
         "react-dom": "ReactDOM",
         "react-router-dom": "ReactRouterDOM",
         antd: "Antd",
+        "@rallie/block": "RallieBlock",
       },
       {
         filter: () => true,
