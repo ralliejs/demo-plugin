@@ -6,17 +6,22 @@ export const demo = createBlock("ralliejs/demo-plugin")
   })
   .relyOn(["core"])
   .onActivate(async () => {
-    const core = demo.connect("core");
-    await core.methods.addI18nResources({
+    const {
+      addI18nResources,
+      registerSlot,
+      registerPluginInfo,
+      addApplication,
+    } = demo.connect("core").methods;
+    await addI18nResources({
       "zh-CN": () => import("../i18n/resources/zh-CN"),
       "en-US": () => import("../i18n/resources/en-US"),
     });
-    core.methods.registerSlot("home", () => import("../components/Home"));
-    core.methods.registerPluginInfo({
+    registerSlot("home", () => import("../components/Home"));
+    registerPluginInfo({
       title: "plugin.title",
       description: "plugin.description",
     });
-    core.methods.addApplication({
+    addApplication({
       name: "样例应用",
       icon: () => import("../components/BlockOutlinedIcon"),
       locale: "menu.root",
